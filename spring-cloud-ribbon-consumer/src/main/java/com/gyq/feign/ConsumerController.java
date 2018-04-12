@@ -1,4 +1,4 @@
-package com.gyq.ribbon;
+package com.gyq.feign;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

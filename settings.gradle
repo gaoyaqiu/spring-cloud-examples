@@ -4,4 +4,5 @@ include 'spring-cloud-eureka-client-1'
 include 'spring-cloud-eureka-client-2'
 include 'spring-cloud-eureka-client-3'
 include 'spring-cloud-ribbon-consumer'
+include 'spring-cloud-feign-consumer'
 
