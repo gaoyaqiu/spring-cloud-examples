@@ -1,4 +1,7 @@
 rootProject.name = 'spring-cloud-examples'
 include 'spring-cloud-eureka-server'
-include 'spring-cloud-eureka-client'
+include 'spring-cloud-eureka-client-1'
+include 'spring-cloud-eureka-client-2'
+include 'spring-cloud-eureka-client-3'
+include 'spring-cloud-ribbon-consumer'
 
