@@ -1,0 +1,10 @@
+group 'com.gyq'
+version '1.0-SNAPSHOT'
+
+
+dependencies {
+    compile(
+            'org.springframework.cloud:spring-cloud-starter-openfeign',
+            'org.springframework.cloud:spring-cloud-starter-netflix-hystrix',
+    )
+}

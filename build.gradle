@@ -16,6 +16,7 @@ buildscript {
 allprojects {
     ext {
         springCloudVersion = 'Finchley.M9'
+        springCloudStreamVersion = 'Elmhurst.RC3'
     }
 }
 
@@ -28,10 +29,14 @@ subprojects {
     targetCompatibility = 1.8
     [compileJava, compileTestJava]*.options*.encoding = "UTF-8"
 
+    configurations {
+        all*.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+    }
+
     dependencies {
         compile(
                 'org.springframework.boot:spring-boot-starter-web',
-                'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server',
+                'org.springframework.boot:spring-boot-starter-undertow'
         )
 
         testCompile('org.springframework.boot:spring-boot-starter-test')
@@ -40,6 +45,8 @@ subprojects {
     dependencyManagement {
         imports {
             mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+            mavenBom "org.springframework.cloud:spring-cloud-stream-dependencies:${springCloudStreamVersion}"
+
         }
     }
 

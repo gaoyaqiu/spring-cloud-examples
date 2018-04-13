@@ -1,5 +1,6 @@
-package com.gyq.feign.client;
+package com.gyq.dashboard.client;
 
+import com.gyq.dashboard.hystrix.HystrixClientFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  *
  * @auther gaoyaqiu
  */
-@FeignClient("eureka-client")
+@FeignClient(value = "eureka-client", fallbackFactory = HystrixClientFallbackFactory.class)
 public interface HomeClient {
 
     @GetMapping("/hello")

@@ -5,4 +5,7 @@ include 'spring-cloud-eureka-client-2'
 include 'spring-cloud-eureka-client-3'
 include 'spring-cloud-ribbon-consumer'
 include 'spring-cloud-feign-consumer'
+include 'spring-cloud-ribbon-consumer-hystrix'
+include 'spring-cloud-feign-consumer-hystrix'
+include 'spring-cloud-ribbon-consumer-hystrix-dashboard'
 
