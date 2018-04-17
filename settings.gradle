@@ -7,5 +7,6 @@ include 'spring-cloud-ribbon-consumer'
 include 'spring-cloud-feign-consumer'
 include 'spring-cloud-ribbon-consumer-hystrix'
 include 'spring-cloud-feign-consumer-hystrix'
-include 'spring-cloud-ribbon-consumer-hystrix-dashboard'
+include 'spring-cloud-hystrix-dashboard'
+include 'spring-cloud-hystrix-turbine'
 

@@ -1,0 +1,62 @@
+version: "3.1"
+
+services:
+    rabbitmq:
+        build:
+            context: docker
+            dockerfile: rabbitmq-Dockerfile
+        ports:
+            - 4369:4369
+            - 5671:5671
+            - 5672:5672
+            - 15672:15672
+            - 25672:25672
+    elasticsearch:
+        build:
+            context: docker
+            dockerfile: es-Dockerfile
+        ports:
+            - 9200:9200
+            - 9300:9300
+    kibana:
+        build:
+            context: docker
+            dockerfile: kibana-Dockerfile
+        ports:
+            - 5601:5601
+        links:
+            - elasticsearch
+    grafana:
+        build:
+            context: docker
+            dockerfile: grafana-Dockerfile
+        ports:
+            - 3000:3000
+        links:
+            - elasticsearch
+    jaeger:
+        image: jaegertracing/all-in-one
+        environment:
+          - COLLECTOR_ZIPKIN_HTTP_PORT=9411
+        ports:
+          - 5775:5775/udp
+          - 6831:6831/udp
+          - 6832:6832/udp
+          - 5778:5778
+          - 16686:16686
+          - 14268:14268
+          - 9411:9411
+    mongodb:
+        image: mongo
+        ports:
+          - 27017:27017
+    redis:
+        image: redis
+        ports:
+          - 6379:6379
+    zookeeper:
+        image: zookeeper
+        ports:
+          - 2181:2181
+          - 2888:2888
+          - 3888:3888

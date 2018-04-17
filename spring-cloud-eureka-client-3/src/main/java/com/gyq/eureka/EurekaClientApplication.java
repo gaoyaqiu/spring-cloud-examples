@@ -28,4 +28,10 @@ public class EurekaClientApplication {
     public String index() {
         return "Hello World! port: " + port;
     }
+
+
+    @GetMapping("/hello3")
+    public String index3() {
+        return "Hello World! port: " + port;
+    }
 }

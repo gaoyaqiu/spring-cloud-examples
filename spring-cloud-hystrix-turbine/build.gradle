@@ -1,0 +1,14 @@
+group 'com.gyq'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile(
+            'org.springframework.boot:spring-boot-starter-actuator',
+            'org.springframework.cloud:spring-cloud-starter-netflix-hystrix',
+            'org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard',
+            'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server',
+            'org.springframework.cloud:spring-cloud-starter-stream-rabbit',
+            // 监控集群
+            'org.springframework.cloud:spring-cloud-netflix-turbine'
+    )
+}
