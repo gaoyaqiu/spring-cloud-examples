@@ -1,0 +1,26 @@
+server:
+  port: 9006
+  compression:
+    enabled: true
+
+spring:
+  application:
+    name: api-gateway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8760/eureka/
+
+#zuul:
+#  routes:
+#    bd:
+#      path: /bd/**
+#      url: http://www.baidu.com
+#
+
+zuul:
+  routes:
+    api:
+        path: /**
+        serviceId: eureka-client

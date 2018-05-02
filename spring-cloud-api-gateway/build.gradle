@@ -4,7 +4,6 @@ version '1.0-SNAPSHOT'
 dependencies {
     compile(
             'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client',
-            'org.springframework.boot:spring-boot-starter-actuator',
-            'org.springframework.cloud:spring-cloud-starter-netflix-hystrix',
+            'org.springframework.cloud:spring-cloud-starter-netflix-zuul',
     )
 }

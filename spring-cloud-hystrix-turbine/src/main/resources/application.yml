@@ -6,11 +6,11 @@ server:
 spring:
   application:
     name: hystrix-turbine
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
 
 eureka:
   client:

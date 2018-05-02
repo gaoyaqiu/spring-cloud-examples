@@ -15,7 +15,7 @@ buildscript {
 
 allprojects {
     ext {
-        springCloudVersion = 'Finchley.M9'
+        springCloudVersion = 'Finchley.RC1'
         springCloudStreamVersion = 'Elmhurst.RC3'
     }
 }
