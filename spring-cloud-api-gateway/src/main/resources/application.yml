@@ -12,6 +12,9 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8760/eureka/
 
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 3000
 #zuul:
 #  routes:
 #    bd:
